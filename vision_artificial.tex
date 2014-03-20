@@ -228,11 +228,11 @@ Las areas de conocimiento que seran abordadas por el proyecto son:
 \begin{itemize}
   \item Se diseñara un robot que sea capaz de soportar la plataforma de hardware necesaria para el sistema.
   \item Se diseñara un robot de tal manera que sea totalmente inalambrico.
-  \item Se implementara un sistema de vision artificial que sea capaz de reconocer objetos fisicos alrededor del robot
-  \item Se implementara un sistema de navegacion que permita al robot moverse de forma autonoma
+  \item Se implementara un sistema de vision artificial que sea capaz de reconocer obstaculos al frente del robot.
+  \item Se implementara un sistema de navegacion que permita al robot moverse de forma autonoma a un destino establecido.
+  \item Se implementara un sistema de vision artificial que sea capaz de distinguir obstaculos existentes en un plano.
+  \item Se implementara un sistema de proteccion contra vuelques, usando giroscopios.
   \item 
-  \item 
-  \item
   \item
 
 \end{itemize}
@@ -241,10 +241,20 @@ Las areas de conocimiento que seran abordadas por el proyecto son:
 Los objetivos a cumplir durante el desarrollo del proyecto son:
 \begin{itemize}
   \item Se estimaran los costos y tiempo de desarrollo del proyecto
-  \item Se diseñaran prototipos 
+  \item Se realizara investigacion acerca de las tecnologias relacionadas al proyecto.
 \end{itemize}
 
 \section{Alcance}
+El proyecto tendra el siguiente alcance:
+\begin{itemize}
+  \item El robot podra desplazarse en un terreno con obstaculos, y sera capaz de esquivar obstaculos o pasarlos por encima.
+  \item El robot podra desplazarse por terrenos planos, y tambien por pendientes no mayores a 25 grados. 
+  \item El software de navegacion recibira coordenadas para llegar a un destino establecido por un operador, y este software sera capaz de conducir al robot a su destino de forma autonoma.
+  \item El robot contara con una camara de video, la imagen obtenida por esta sera procesada por el sistema de vision artificial.
+  \item Por limitaciones del hardware a utilizar, las obstaculos del terreno tienes que tener colores diferentes al terreno, para falilitar el trabajo al sistema de vision artificial.
+  \item La cobertura entre el operador y el robot estara limitada por el maximo alcance del sistema de comunicacion inalambrica a utilizar.
+  \item El sistema de vision artificial operara solo en ambientes con iluminacion suficiente como para poder distinguir los obstaculos.
+\end{itemize}
 
 
 \pagebreak % poner esto al final de cada seccion
