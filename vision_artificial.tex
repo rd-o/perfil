@@ -191,7 +191,9 @@ La visión artificial es un subcampo de la inteligencia artificial. El propósito 
 
 Un robot o entidad virtual, para poder desenvolverse en su entorno, necesita información de entrada, que debe ser procesada para luego activar sus actuadores de acuerdo a los datos de entrada procesados. Estos datos de entrada pueden ser datos de distintos tipos de sensores. Dependiendo la complejidad del robot, estos pueden ser de sonido, imágenes y tacto. En cuanto a los sensores de imágenes y vídeo, para poder ser procesados es necesario tener un sistema que maneje estas imágenes y luego entienda el contenido de cada una de las imágenes que se le presente.
 
-El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. Este robot es uno robot tipo tanque, con dos orugas, este tipo de configuracion permite al robot una movilidad en todas las direcciones, y tambien en cualquier tipo de terreno.
+El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. El robot a construir es un tipo, con dos orugas. Este tipo de configuracion permite al robot una movilidad en todas las direcciones, y tambien en terrenos de tierra, grava y arena.
+
+El robot necesita una plataforma independiente para poder desenvolverse, por lo tanto se usara un ordenador de placa unica de bajo costo y bajo consumo de energia. 
 
 El proyecto estara orientado al area de inteligencia artificial y robotica.
 
@@ -235,15 +237,18 @@ Las areas de conocimiento que seran abordadas por el proyecto son:
   \item Se implementara un sistema de vision artificial que sea capaz de distinguir obstaculos existentes en un plano.
   \item Se implementara un sistema de proteccion que alarme al robot en caso de estar peligrosamente inclinado
   \item Se implementara un sistema de comunicaciones, para que el robot pueda recibir las coordenadas de destino y otros datos. 
-  \item
+  \item Se implementara un algoritmo para detectar la profundidad de los obstaculos.
 
 \end{itemize}
 
 \subsection{Objetivos metodológicos}
 Los objetivos a cumplir durante el desarrollo del proyecto son:
 \begin{itemize}
-  \item Se estimaran los costos y tiempo de desarrollo del proyecto
+  \item Se estimaran los costos y tiempo de desarrollo del proyecto.
   \item Se realizara investigacion acerca de las tecnologias relacionadas al proyecto.
+  \item Se realizara una estimacion de cada historia de usuario del product backlog.
+  \item Se asignara una prioridad a cada historia de usuario, para luego ejecutar primero las historias con mas prioridad.
+  \item 
 \end{itemize}
 
 \section{Alcance}
@@ -278,7 +283,7 @@ El product backlog contiene los requisitos o funcionalidades deseadas del proyec
 \centering
 \begin{longtable}{|p{5cm}|l|p{10cm}|l|}
   \hline
-  Descripcion & Costo estimado & Condiciones de satisfaccion & Valor aportado \\
+  \textbf{Descripcion} & \textbf{Costo estimado} & \textbf{Condiciones de satisfaccion} & \textbf{Valor aportado} \\
   \hline
   Sistema detector de inclinacion & & Dado un grado de inclinacion el sistema debe generar un evento para detener el movimiento del robot & \\  
   \hline
@@ -298,9 +303,9 @@ El product backlog contiene los requisitos o funcionalidades deseadas del proyec
   \hline
   Modulo de comunicaciones & & Debe aceptar comandos de un operador y luego procesarlos & \\
   \hline
-  Modulo de control de motores & Dados los valores para cada motor, debe mover los motores de acuerdo a los parametros & \\
+  Modulo de control de motores & & Dados los valores para cada motor, debe mover los motores de acuerdo a los parametros & \\
   \hline
-   
+  Modulo detector de profundidad de obstaculos & & Dado mas de un fotograma, este modulo debe devolver la profundidad de cada obstaculo del fotograma & \\
   \hline
 
 \end{longtable}
@@ -308,14 +313,19 @@ El product backlog contiene los requisitos o funcionalidades deseadas del proyec
 \end{landscape}
 
 \subsection{Historias de usuario priorizadas}
+\begin{landscape}
+\begin{table}
+\centering
 \begin{longtable}{|l|l|l|l|l|l|}
   \hline
   Sprint & Identificador objetivo & Descripcion & Costo estimado & Valor aportado & Prioridad \\
   \hline
 \end{longtable}
-\pagebreak % poner esto al final de cada seccion
+\end{table}
+\end{landscape}
+
+%\pagebreak % poner esto al final de cada seccion
 \section{Bibliografía}
 \pagebreak % poner esto al final de cada seccion
 
 \end{document}
-
