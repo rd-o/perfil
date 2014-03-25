@@ -102,7 +102,8 @@
 %\usepackage{tikz}
 
 \usepackage{longtable}
-\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{hyperref}
 
 %------------------------- Inicio del documento ---------------------------
 
@@ -258,7 +259,7 @@ El proyecto tendra el siguiente alcance:
   \item El robot podra desplazarse por terrenos planos, y tambien por pendientes no mayores a 25 grados. 
   \item El software de navegacion recibira coordenadas para llegar a un destino establecido por un operador, y este software sera capaz de conducir al robot a su destino de forma autonoma.
   \item El robot contara con una camara de video, la imagen obtenida por esta sera procesada por el sistema de vision artificial.
-  \item Por limitaciones del hardware a utilizar, las obstaculos del terreno tienes que tener colores diferentes al terreno, para falilitar el trabajo al sistema de vision artificial.
+  \item Por limitaciones del hardware a utilizar, las obstaculos del terreno tienen que tener colores diferentes al terreno, para falilitar el trabajo al sistema de vision artificial.
   \item La cobertura entre el operador y el robot estara limitada por el maximo alcance del sistema de comunicacion inalambrica a utilizar.
   \item El sistema de vision artificial operara solo en ambientes con iluminacion suficiente como para poder distinguir los obstaculos.
 \end{itemize}
@@ -309,23 +310,31 @@ El product backlog contiene los requisitos o funcionalidades deseadas del proyec
   \hline
 
 \end{longtable}
+ \caption{Product backlog}
+\label{product_backlog}
 \end{table}
 \end{landscape}
 
-\subsection{Historias de usuario priorizadas}
-\begin{landscape}
-\begin{table}
-\centering
-\begin{longtable}{|l|l|l|l|l|l|}
-  \hline
-  Sprint & Identificador objetivo & Descripcion & Costo estimado & Valor aportado & Prioridad \\
-  \hline
-\end{longtable}
-\end{table}
-\end{landscape}
+%\subsection{Historias de usuario priorizadas}
+%\begin{landscape}
+%\begin{table}
+%\centering
+%\begin{longtable}{|l|l|l|l|l|l|}
+%  \hline
+%  Sprint & Identificador objetivo & Descripcion & Costo estimado & Valor aportado & Prioridad \\
+%  \hline
+%\end{longtable}
+%\end{table}
+%\end{landscape}
 
 %\pagebreak % poner esto al final de cada seccion
 \section{Bibliografía}
+\begin{thebibliography}{99}
+%\bibitem{Libro_ejemplo} Apellido, Nombre.Nombre texto.Editorial.Año.# de pag
+%\bibitem{PHP} PHP Web-Seite: \url{http://www.php.net}
+\bibitem{robotica_wiki} Robótica - Wikipedia: \url{http://es.wikipedia.org/wiki/Robótica}. 25 de Marzo de 2014
+\bibitem{opencv_wiki} OpenCV - Wikipedia: \url{http://en.wikipedia.org/wiki/OpenCV}. 25 de Marzo de 2014
+\end{thebibliography}
 \pagebreak % poner esto al final de cada seccion
 
 \end{document}
