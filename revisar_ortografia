@@ -1,2 +1,3 @@
-aspell  --encoding=iso-8859-1 -l es  -t check plantilla.tex
+#!/bin/bash
+aspell  --encoding=iso-8859-1 -l es  -t check $1
 

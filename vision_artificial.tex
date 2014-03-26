@@ -192,14 +192,14 @@ La visión artificial es un subcampo de la inteligencia artificial. El propósito 
 
 Un robot o entidad virtual, para poder desenvolverse en su entorno, necesita información de entrada, que debe ser procesada para luego activar sus actuadores de acuerdo a los datos de entrada procesados. Estos datos de entrada pueden ser datos de distintos tipos de sensores. Dependiendo la complejidad del robot, estos pueden ser de sonido, imágenes y tacto. En cuanto a los sensores de imágenes y vídeo, para poder ser procesados es necesario tener un sistema que maneje estas imágenes y luego entienda el contenido de cada una de las imágenes que se le presente.
 
-El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. El robot a construir es un tipo, con dos orugas. Este tipo de configuracion permite al robot una movilidad en todas las direcciones, y tambien en terrenos de tierra, grava y arena.
+El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. El robot a construir es un tipo, con dos orugas. Este tipo de configuración permite al robot una movilidad en todas las direcciones, y también en terrenos de tierra, grava y arena.
 
-El robot necesita una plataforma independiente para poder desenvolverse, por lo tanto se usara un ordenador de placa unica de bajo costo y bajo consumo de energia. 
+El robot necesita una plataforma independiente para poder desenvolverse, por lo tanto se usara un ordenador de placa única de bajo costo y bajo consumo de energía. 
 
-El proyecto estara orientado al area de inteligencia artificial y robotica.
+El proyecto estará orientado al área de inteligencia artificial y robótica.
 
 
-\pagebreak % poner esto al final de cada seccion
+%\pagebreak % poner esto al final de cada seccion
 \section{Identificación del problema}
 %efectos: 
 % - el robot no es totalmente autonomo
@@ -214,7 +214,7 @@ El proyecto estara orientado al area de inteligencia artificial y robotica.
 \begin{figure}[h!]
   \centering
     \includegraphics[scale=0.3]{arbol_de_problemas}
-  \caption{Arbol de problemas.}
+  \caption{Árbol de problemas.}
 \end{figure}
 
 \textbf{Problema:} La necesidad de un sistema que permita a un robot poder desplazarse de forma autónoma, en un entorno alejado o de difícil acceso.
@@ -226,25 +226,25 @@ Un \emph{entorno alejado} puede estar a cientos o miles de kilómetros alejado de
 Un \emph{entorno de difícil acceso} puede ser un pasadizo o cueva de difícil acceso para un operador. En este tipo de entorno puede que no haya visión directa desde el operador hacia el robot, por este motivo es casi imposible poder operar el robot. En ciertos casos en que se tenga un robot con una cámara inalámbrica, puede que la señal de control sea muy baja, debido a obstáculos y distancia alejada, esto puede ocasionar la perdida de la señal de vídeo y control.
 
 
-\pagebreak % poner esto al final de cada seccion
+% \pagebreak % poner esto al final de cada seccion
 \section{Áreas involucradas}
-Las areas de conocimiento que seran abordadas por el proyecto son:
+Las áreas de conocimiento que serán abordadas por el proyecto son:
 \begin{itemize}
   \item Inteligencia artificial
-  \item Robotica
+  \item Robótica
 \end{itemize}
 \section{Objetivo del proyecto}
 \subsection{Objetivos de la aplicación}
 \begin{itemize}
   \item Se diseñara un robot que sea capaz de soportar la plataforma de hardware necesaria para el sistema.
-  \item Se diseñara un robot de tal manera que sea totalmente inalambrico.
-  \item Se implementara un sistema de vision artificial que sea capaz de reconocer obstaculos al frente del robot.
-  \item Se implementara un sistema de navegacion que permita al robot moverse de forma autonoma a un destino establecido.
-  \item Se implementara un sistema de vision artificial que sea capaz de distinguir obstaculos existentes en un plano.
-  \item Se implementara un sistema de proteccion que alarme al robot en caso de estar peligrosamente inclinado
+  \item Se diseñara un robot de tal manera que sea totalmente inalámbrico.
+  \item Se implementara un sistema de visión artificial que sea capaz de reconocer obstáculos al frente del robot.
+  \item Se implementara un sistema de navegación que permita al robot moverse de forma autónoma a un destino establecido.
+  \item Se implementara un sistema de visión artificial que sea capaz de distinguir obstáculos existentes en un plano.
+  \item Se implementara un sistema de protección que alarme al robot en caso de estar peligrosamente inclinado
   \item Se implementara un sistema de comunicaciones, para que el robot pueda recibir las coordenadas de destino y otros datos. 
-  \item Se implementara un algoritmo para detectar la profundidad de los obstaculos.
-  \item Se desarrollara un sistema de posicionamiento, para detectar la posicion del robot.
+  \item Se implementara un algoritmo para detectar la profundidad de los obstáculos.
+  \item Se desarrollara un sistema de posicionamiento, para detectar la posición del robot.
 
 \end{itemize}
 
@@ -252,67 +252,67 @@ Las areas de conocimiento que seran abordadas por el proyecto son:
 Los objetivos a cumplir durante el desarrollo del proyecto son:
 \begin{itemize}
   \item Se estimaran los costos y tiempo de desarrollo del proyecto.
-  \item Se realizara investigacion acerca de las tecnologias relacionadas al proyecto.
-  \item Se realizara una estimacion de cada historia de usuario del product backlog.
+  \item Se realizara investigación acerca de las tecnologías relacionadas al proyecto.
+  \item Se realizara una estimación de cada historia de usuario del product backlog.
   \item Se asignara una prioridad a cada historia de usuario, para luego ejecutar primero las historias con mas prioridad.
   \item 
 \end{itemize}
 
 \section{Alcance}
-El proyecto tendra el siguiente alcance:
+El proyecto tendrá el siguiente alcance:
 \begin{itemize}
-  \item El robot podra desplazarse en un terreno con obstaculos, y sera capaz de esquivar obstaculos o pasarlos por encima.
-  \item El robot podra desplazarse por terrenos planos, y tambien por pendientes no mayores a 25 grados. 
-  \item El software de navegacion recibira coordenadas para llegar a un destino establecido por un operador, y este software sera capaz de conducir al robot a su destino de forma autonoma.
-  \item El robot contara con una camara de video, la imagen obtenida por esta sera procesada por el sistema de vision artificial.
-  \item Por limitaciones del hardware a utilizar, las obstaculos del terreno tienen que tener colores diferentes al terreno, para falilitar el trabajo al sistema de vision artificial.
-  \item La cobertura entre el operador y el robot estara limitada por el maximo alcance del sistema de comunicacion inalambrica a utilizar.
-  \item El sistema de vision artificial operara solo en ambientes con iluminacion suficiente como para poder distinguir los obstaculos.
+  \item El robot podrá desplazarse en un terreno con obstáculos, y sera capaz de esquivar obstáculos o pasarlos por encima.
+  \item El robot podrá desplazarse por terrenos planos, y también por pendientes no mayores a 25 grados. 
+  \item El software de navegación recibirá coordenadas para llegar a un destino establecido por un operador, y este software sera capaz de conducir al robot a su destino de forma autónoma.
+  \item El robot contara con una cámara de vídeo, la imagen obtenida por esta sera procesada por el sistema de visión artificial.
+  \item Por limitaciones del hardware a utilizar, las obstáculos del terreno tienen que tener colores diferentes al terreno, para facilitar el trabajo al sistema de visión artificial.
+  \item La cobertura entre el operador y el robot estará limitada por el máximo alcance del sistema de comunicación inalámbrica a utilizar.
+  \item El sistema de visión artificial operara solo en ambientes con iluminación suficiente como para poder distinguir los obstáculos.
 \end{itemize}
 
 
 \pagebreak % poner esto al final de cada seccion
 \section{Justificación}
-Existen diferentes aplicaciones en las que este proyecto puede ser util, por ejemplo en exploracion espacial. En estos casos el robot esta alejado de su operador por distancias astronomicas, por tanto, el control del robot no es en tiempo real, y ademas hay posibilidad de que las comunicaciones se corten de vez en cuando, dejando al robot estatico o incluso en riesgo de dejarlo inutilizable.
+Existen diferentes aplicaciones en las que este proyecto puede ser útil, por ejemplo en exploración espacial. En estos casos el robot esta alejado de su operador por distancias astronómicas, por tanto, el control del robot no es en tiempo real, y además hay posibilidad de que las comunicaciones se corten de vez en cuando, dejando al robot estático o incluso en riesgo de dejarlo inutilizable.
 
-Otra aplicacion para este proyecto es la exploracion de lugares de dificil acceso para una persona, estos lugares pueden ser cuevas o lugares con contaminacion de materiales radioactivos.
+Otra aplicación para este proyecto es la exploración de lugares de difícil acceso para una persona, estos lugares pueden ser cuevas o lugares con contaminación de materiales radioactivos.
 
-En nuestro pais dificilmente se pueden encontrar proyectos relacionados a la inteligencia artificial y robotica. Este proyecto de grado pretende aportar a la comunidad universitaria con investigacion relacionada a las areas de este proyecto.
+En nuestro país difícilmente se pueden encontrar proyectos relacionados a la inteligencia artificial y robótica. Este proyecto de grado pretende aportar a la comunidad universitaria con investigación relacionada a las áreas de este proyecto.
 
 \pagebreak % poner esto al final de cada seccion
 \section{Plan de actividades}
 
 \subsection{Product backlog}
-El product backlog contiene los requisitos o funcionalidades deseadas del proyecto. Cada funcionalidad tiene un costo estimado de cuanto esfuerzo necesita para ser finalizado, tambien cada funcionalidad tiene condiciones de satisfaccion que cumplir para poder marcarlo como finalizado.
+El product backlog contiene los requisitos o funcionalidades deseadas del proyecto. Cada funcionalidad tiene un costo estimado de cuanto esfuerzo necesita para ser finalizado, también cada funcionalidad tiene condiciones de satisfacción que cumplir para poder marcarlo como finalizado.
 
 \begin{landscape}
 \begin{table}
 \centering
 \begin{longtable}{|p{5cm}|l|p{10cm}|l|}
   \hline
-  \textbf{Descripcion} & \textbf{Costo estimado} & \textbf{Condiciones de satisfaccion} & \textbf{Valor aportado} \\
+  \textbf{Descripción} & \textbf{Costo estimado} & \textbf{Condiciones de satisfacción} & \textbf{Valor aportado} \\
   \hline
-  Sistema detector de inclinacion & & Dado un grado de inclinacion el sistema debe generar un evento para detener el movimiento del robot & \\  
+  Sistema detector de inclinación & & Dado un grado de inclinación el sistema debe generar un evento para detener el movimiento del robot & \\  
   \hline
-  Procesador de imagen & & Dado un fotograma, se debe procesar la imagen de tal manera que el detector de obstaculos pueda detectar la mayoria de los obstaculos. & \\
+  Procesador de imagen & & Dado un fotograma, se debe procesar la imagen de tal manera que el detector de obstáculos pueda detectar la mayoría de los obstáculos. & \\
   \hline
-  Detector de obstaculos & & Dado un fotograma procesado, el detector de obstaculos debe devolver las coordenadas y dimensiones de cada obstaculo & \\
+  Detector de obstáculos & & Dado un fotograma procesado, el detector de obstáculos debe devolver las coordenadas y dimensiones de cada obstáculo & \\
   \hline
-  Sistema de navegacion & & Dadas las coordenadas de los obstaculos y del destino, el sistema de navegacion debe guiar al robot a su destino, esquivando obstaculos.  & \\
+  Sistema de navegación & & Dadas las coordenadas de los obstáculos y del destino, el sistema de navegación debe guiar al robot a su destino, esquivando obstáculos.  & \\
   \hline
-  Construccion del robot & & Todos los modulos del robot deben estar ensamblados, de tal manera que el robot pueda desplazarse en un entorno plano & \\
+  Construcción del robot & & Todos los módulos del robot deben estar ensamblados, de tal manera que el robot pueda desplazarse en un entorno plano & \\
   \hline
-  Fuente de la fuente de alimentacion del robot & & La fuente debe proveer al robot de la energia para poder desempeñar todas sus funciones & \\
+  Fuente de la fuente de alimentación del robot & & La fuente debe proveer al robot de la energía para poder desempeñar todas sus funciones & \\
   \hline
-  Controlador de carga de bateria & & Debe devolver la carga actual de la bateria. Tambien debe alertar si existe un nivel bajo de bateria & \\
+  Controlador de carga de batería & & Debe devolver la carga actual de la batería. También debe alertar si existe un nivel bajo de batería & \\
   \hline
-  Modulo de control de camara & & Dadas las coordenadas de entrada, debe mover la camara a la posicion indicada & \\ 
+  Modulo de control de cámara & & Dadas las coordenadas de entrada, debe mover la cámara a la posición indicada & \\ 
   \hline
   Modulo de comunicaciones & & Debe aceptar comandos de un operador y luego procesarlos & \\
   \hline
-  Modulo de control de motores & & Dados los valores para cada motor, debe mover los motores de acuerdo a los parametros & \\
+  Modulo de control de motores & & Dados los valores para cada motor, debe mover los motores de acuerdo a los parámetros & \\
   \hline
-  Modulo detector de profundidad de obstaculos & & Dado mas de un fotograma, este modulo debe devolver la profundidad de cada obstaculo del fotograma & \\
+  Modulo detector de profundidad de obstáculos & & Dado mas de un fotograma, este modulo debe devolver la profundidad de cada obstáculo del fotograma & \\
   \hline
 
 \end{longtable}
