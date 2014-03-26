@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para una carta en LaTeX, en español.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\let\@texttop\relax
+%\makeatother
+
+\documentclass[10pt]{letter}
+%\topmargin = 10pt
+% Esto es para poder escribir acentos directamente:
+\usepackage[latin1]{inputenc}
+% Esto es para que el LaTeX sepa que la carta está en español:
+\usepackage[spanish]{babel}
+% para el membrete
+%\usepackage{wallpaper}
+%\ULCornerWallPaper{1}{membrete_bw.pdf}
+
+%\address{R. Alejandro Oquendo M.\\
+%  Cassiopedia S.R.L. \\
+%  Virreynato de Lima \#1621 \\
+%  Cochabamba - Bolivia}
+
+\signature{Ronald Alejandro Oquendo Muñoz }
+
+\begin{document}
+
+\begin{letter}{  
+Señor \\
+Lic. Yony Richard Montoya Burgos \\
+Director de Carrera \\[2ex]
+ 
+Campus las Cuadras \\
+Universidad Mayor de San Simón \\
+\underline{Presente} \\[2ex]
+
+Ref: Nombramiento de tutor}
+
+\opening{De mi mayor consideración:}
+
+Mediante la presente tengo a bien solicitar se formalice el nombramiento como tutor(a) de la Lic. Garcia Perez Carmen Rosa. El título de mi trabajo es: \textbf{Desarrollo de un sistema de navegación autónomo con visión artificial usando OpenCV} y la modalidad en la que realizo mi trabajo es \emph{Proyecto de grado}.
+
+ 
+
+
+\closing{Al agradecer por la atención prestada me despido de Ud.,}
+\cc{Archivo}
+
+% poner indice
+
+\end{letter}
+\end{document}
+
