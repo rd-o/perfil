@@ -154,9 +154,9 @@
     \\
 	\textsc{Elaborado por:} Ronald Alejandro Oquendo Muñoz	\\
     \\
-	\textsc{Tutor:}	(Por designar)\\
+	\textsc{Tutor:}	\\
     \\
-	\textsc{Docente:} Lic. Rolando Jaldin R.\\
+	\textsc{Docente:} Lic. Rolando Jald\'in R.\\
     \\
 %\end{tabbing}
 
@@ -192,9 +192,9 @@ La visión artificial es un subcampo de la inteligencia artificial. El propósito 
 
 Un robot o entidad virtual, para poder desenvolverse en su entorno, necesita información de entrada, que debe ser procesada para luego activar sus actuadores de acuerdo a los datos de entrada procesados. Estos datos de entrada pueden ser datos de distintos tipos de sensores. Dependiendo la complejidad del robot, estos pueden ser de sonido, imágenes y tacto. En cuanto a los sensores de imágenes y vídeo, para poder ser procesados es necesario tener un sistema que maneje estas imágenes y luego entienda el contenido de cada una de las imágenes que se le presente.
 
-El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. El robot a construir es un tipo, con dos orugas. Este tipo de configuración permite al robot una movilidad en todas las direcciones, y también en terrenos de tierra, grava y arena.
+El proyecto estará orientado a desarrollar un sistema de navegación autónomo usando las bibliotecas de OpenCV (Open Source Computer Vision) para un robot. El robot a construir es un tipo tanque, con dos orugas. Este tipo de configuración permite al robot una movilidad en todas las direcciones, y también en terrenos de tierra, grava y arena.
 
-El robot necesita una plataforma independiente para poder desenvolverse, por lo tanto se usara un ordenador de placa única de bajo costo y bajo consumo de energía. 
+El robot necesita una plataforma independiente para poder desenvolverse, por lo tanto se usara un ordenador de placa única: el Raspberry Pi, de bajo costo y bajo consumo de energía. 
 
 El proyecto estará orientado al área de inteligencia artificial y robótica.
 
@@ -238,24 +238,29 @@ Las áreas de conocimiento que serán abordadas por el proyecto son:
 \begin{itemize}
   \item Se diseñara un robot que sea capaz de soportar la plataforma de hardware necesaria para el sistema.
   \item Se diseñara un robot de tal manera que sea totalmente inalámbrico.
-  \item Se implementara un sistema de visión artificial que sea capaz de reconocer obstáculos al frente del robot.
   \item Se implementara un sistema de navegación que permita al robot moverse de forma autónoma a un destino establecido.
-  \item Se implementara un sistema de visión artificial que sea capaz de distinguir obstáculos existentes en un plano.
-  \item Se implementara un sistema de protección que alarme al robot en caso de estar peligrosamente inclinado
-  \item Se implementara un sistema de comunicaciones, para que el robot pueda recibir las coordenadas de destino y otros datos. 
-  \item Se implementara un algoritmo para detectar la profundidad de los obstáculos.
-  \item Se desarrollara un sistema de posicionamiento, para detectar la posición del robot.
+  \item Se implementara un sistema de visión artificial que sea capaz de reconocer obstáculos existentes en un plano.
+  \item Se implementara un sistema de protección que alarme al robot en caso de estar peligrosamente inclinado.
+  \item Se implementara un sistema de comunicaciones entre el robot y el operador. 
+  \item Se implementara un algoritmo para detectar la profundidad de los obstáculos en un fotograma.
+  \item Se desarrollara un sistema de posicionamiento, el cual detectara la posición actual del robot.
+  \item Se escribirá documentación técnica y de usuario del software a entregar.
 
 \end{itemize}
 
 \subsection{Objetivos metodológicos}
 Los objetivos a cumplir durante el desarrollo del proyecto son:
 \begin{itemize}
-  \item Se estimaran los costos y tiempo de desarrollo del proyecto.
-  \item Se realizara investigación acerca de las tecnologías relacionadas al proyecto.
+  \item Se listaran de requisitos del proyecto para el product backlog.
   \item Se realizara una estimación de cada historia de usuario del product backlog.
-  \item Se asignara una prioridad a cada historia de usuario, para luego ejecutar primero las historias con mas prioridad.
-  \item 
+  \item Se asignara una prioridad a cada historia de usuario del product backlog.
+  \item Se definirán los criterios de aceptación de cada historia de usuario.
+  \item Se seleccionaran las historias de usuario según su prioridad y/o cantidad de esfuerzo para cada iteración (sprint backlog).
+  \item Se ejecutaran las tareas asignadas de cada historia de usuario, de la iteración actual.
+  \item Se realizara ingeniería de calidad a las piezas de software entregables de cada iteración.
+  \item Se realizaran ajustes al product backlog según lo requiera el cliente del proyecto.
+  \item Se presentara un entregable al final de cada iteración.
+  \item Se integrara el sistema completo en la ultima iteración.
 \end{itemize}
 
 \section{Alcance}
@@ -267,11 +272,11 @@ El proyecto tendrá el siguiente alcance:
   \item El robot contara con una cámara de vídeo, la imagen obtenida por esta sera procesada por el sistema de visión artificial.
   \item Por limitaciones del hardware a utilizar, las obstáculos del terreno tienen que tener colores diferentes al terreno, para facilitar el trabajo al sistema de visión artificial.
   \item La cobertura entre el operador y el robot estará limitada por el máximo alcance del sistema de comunicación inalámbrica a utilizar.
-  \item El sistema de visión artificial operara solo en ambientes con iluminación suficiente como para poder distinguir los obstáculos.
+  \item El sistema de visión artificial podrá operar, solo en ambientes con iluminación suficiente como para poder distinguir los obstáculos.
 \end{itemize}
 
 
-\pagebreak % poner esto al final de cada seccion
+%\pagebreak % poner esto al final de cada seccion
 \section{Justificación}
 Existen diferentes aplicaciones en las que este proyecto puede ser útil, por ejemplo en exploración espacial. En estos casos el robot esta alejado de su operador por distancias astronómicas, por tanto, el control del robot no es en tiempo real, y además hay posibilidad de que las comunicaciones se corten de vez en cuando, dejando al robot estático o incluso en riesgo de dejarlo inutilizable.
 
@@ -279,47 +284,110 @@ Otra aplicación para este proyecto es la exploración de lugares de difícil acces
 
 En nuestro país difícilmente se pueden encontrar proyectos relacionados a la inteligencia artificial y robótica. Este proyecto de grado pretende aportar a la comunidad universitaria con investigación relacionada a las áreas de este proyecto.
 
-\pagebreak % poner esto al final de cada seccion
+%\pagebreak % poner esto al final de cada seccion
 \section{Plan de actividades}
 
+En el presente proyecto se utilizar\'a la metodología ágil Scrum, para gestionar el desarrollo del software.
+
 \subsection{Product backlog}
-El product backlog contiene los requisitos o funcionalidades deseadas del proyecto. Cada funcionalidad tiene un costo estimado de cuanto esfuerzo necesita para ser finalizado, también cada funcionalidad tiene condiciones de satisfacción que cumplir para poder marcarlo como finalizado.
+El product backlog contiene los requisitos o funcionalidades deseadas del proyecto. Cada funcionalidad tiene un costo estimado de cuanto esfuerzo necesita para ser finalizado, también cada funcionalidad tiene condiciones de satisfacción que cumplir.
 
-\begin{landscape}
-\begin{table}
-\centering
-\begin{longtable}{|p{5cm}|l|p{10cm}|l|}
+En la siguiente tabla se listan las historias de usuario, con sus respectivas estimaciones, que son medidas en \emph{puntos de historia}.
+%\begin{table}
+%\centering
+\begin{longtable}{|c|p{9cm}@{\vrule height 15pt} c|} 
   \hline
-  \textbf{Descripción} & \textbf{Costo estimado} & \textbf{Condiciones de satisfacción} & \textbf{Valor aportado} \\
+  \textbf{N°} & \textbf{Historia de usuario} & \textbf{Estimación} \\ 
   \hline
-  Sistema detector de inclinación & & Dado un grado de inclinación el sistema debe generar un evento para detener el movimiento del robot & \\  
   \hline
-  Procesador de imagen & & Dado un fotograma, se debe procesar la imagen de tal manera que el detector de obstáculos pueda detectar la mayoría de los obstáculos. & \\
+  1 &  Sistema detector de inclinación & 2 \\  
   \hline
-  Detector de obstáculos & & Dado un fotograma procesado, el detector de obstáculos debe devolver las coordenadas y dimensiones de cada obstáculo & \\
+  2 & Procesador de imagen &  5\\
   \hline
-  Sistema de navegación & & Dadas las coordenadas de los obstáculos y del destino, el sistema de navegación debe guiar al robot a su destino, esquivando obstáculos.  & \\
+  3 & Detector de obstáculos & 8 \\
   \hline
-  Construcción del robot & & Todos los módulos del robot deben estar ensamblados, de tal manera que el robot pueda desplazarse en un entorno plano & \\
+  4 & Sistema de navegación & 8 \\
   \hline
-  Fuente de la fuente de alimentación del robot & & La fuente debe proveer al robot de la energía para poder desempeñar todas sus funciones & \\
+  5 & Construcción del robot & 5\\
   \hline
-  Controlador de carga de batería & & Debe devolver la carga actual de la batería. También debe alertar si existe un nivel bajo de batería & \\
+  6 & Fuente de la fuente de alimentación del robot & 5 \\
   \hline
-  Modulo de control de cámara & & Dadas las coordenadas de entrada, debe mover la cámara a la posición indicada & \\ 
+  7 & Controlador de carga de batería & 5\\
   \hline
-  Modulo de comunicaciones & & Debe aceptar comandos de un operador y luego procesarlos & \\
+  8 & Modulo de control de cámara & 5\\ 
   \hline
-  Modulo de control de motores & & Dados los valores para cada motor, debe mover los motores de acuerdo a los parámetros & \\
+  9 & Modulo de comunicaciones & 5\\
   \hline
-  Modulo detector de profundidad de obstáculos & & Dado mas de un fotograma, este modulo debe devolver la profundidad de cada obstáculo del fotograma & \\
+  10 & Modulo de control de motores & 3\\
   \hline
-
+  11 & Modulo detector de profundidad de obstáculos & 8 \\
+  \hline
+  & \textbf{Total} &  59 \\
+  \hline
 \end{longtable}
- \caption{Product backlog}
-\label{product_backlog}
-\end{table}
-\end{landscape}
+
+La suma total de puntos de historia es de 59, se estima que por cada iteración se pueden cumplir 8 puntos, por lo tanto el proyecto se completara en aproximadamente 7 iteraciones, o 14 semanas.\\
+
+% \caption{Product backlog}
+%\label{product_backlog1}
+%\end{table}
+
+%\begin{table}
+%\centering
+\subsection{Criterios de aceptación}
+
+A continuación se muestran los criterios de aceptación de cada historia de usuario. \\
+
+\begin{tabular}{|c|p{12cm}|} 
+  \hline
+  \textbf{N° H.U.} & \textbf{Criterio de aceptación}\\ 
+  \hline
+  \hline
+  1 &  Dado un fotograma, se debe procesar la imagen de tal manera que el detector de obstáculos pueda detectar la mayoría de los obstáculos.  \\
+  \hline
+  2 & Dado un fotograma, se debe procesar la imagen de tal manera que el detector de obstáculos pueda detectar la mayoría de los obstáculos \\
+  \hline
+  3 & Dado un fotograma procesado, el detector de obstáculos debe devolver las coordenadas y dimensiones de cada obstáculo \\
+  \hline
+  4 & Dadas las coordenadas de los obstáculos y del destino, el sistema de navegación debe guiar al robot a su destino, esquivando obstáculos \\
+  \hline
+  5 & Todos los módulos del robot deben estar ensamblados, de tal manera que el robot pueda desplazarse en un entorno plano \\
+  \hline
+  6 & La fuente debe proveer al robot de la energía para poder desempeñar todas sus funciones \\
+  \hline
+  7 & Debe devolver la carga actual de la batería. También debe alertar si existe un nivel bajo de batería \\
+  \hline
+  8 & Dadas las coordenadas de entrada, debe mover la cámara a la posición indicada \\ 
+  \hline
+  9 & Debe aceptar ordenes de un operador y luego procesarlos \\
+  \hline
+  10 & Dados los valores para cada motor, debe mover los motores de acuerdo a los parámetros \\
+  \hline
+  11 & Dado mas de un fotograma, este modulo debe devolver la profundidad de cada obstáculo del fotograma \\
+  \hline
+\end{tabular} \\
+
+%Las iteraciones tendran una duracion de dos semanas, al final de cada iteracion se presentara una demostracion del entregable.  \\
+%
+%\begin{tabular}{|l|l|}
+%\hline
+%\textbf{Descripción}    & \textbf{Duración} \\
+%\hline
+%\textbf{Iteración 0} & 1 semana \\
+%\hline
+%\textbf{Iteración 1} & 2 semanas \\
+%\hline
+%\textbf{Iteración 2} & 2 semanas \\
+%\hline
+%\textbf{Iteración 3} & 2 semanas \\
+%\hline
+%\end{tabular}
+
+
+% \caption{Criterios de aceptación}
+%\label{criterios_de_aceptacion}
+%\end{table}
+
 
 %\subsection{Historias de usuario priorizadas}
 %\begin{landscape}
@@ -340,7 +408,12 @@ El product backlog contiene los requisitos o funcionalidades deseadas del proyec
 %\bibitem{PHP} PHP Web-Seite: \url{http://www.php.net}
 \bibitem{robotica_wiki} Robótica - Wikipedia: \url{http://es.wikipedia.org/wiki/Robótica}. 25 de Marzo de 2014
 \bibitem{opencv_wiki} OpenCV - Wikipedia: \url{http://en.wikipedia.org/wiki/OpenCV}. 25 de Marzo de 2014
+\bibitem{scrum_wiki} Scrum - Wikipedia: \url{https://en.wikipedia.org/wiki/Scrum_(software_development)}. 26 de Marzo de 2014
+\bibitem{opencv_oficial} Página oficial de OpenCV: \url{http://opencv.org/}. 27 de Marzo de 2014
+\bibitem{raspberry_pi} Página oficial de Raspberry Pi: \url{http://www.raspberrypi.org/}. 27 de Marzo de 2014
+\bibitem{raspberry_pi_wiki} Raspberry Pi - Wikipedia: \url{https://en.wikipedia.org/wiki/Raspberry_Pi}. 27 de Marzo de 2014
+\bibitem{single_board_pc} Single board computer - Wikipedia: \url{https://en.wikipedia.org/wiki/Single-board_computer}. 27 de Marzo de 2014
 \end{thebibliography}
-\pagebreak % poner esto al final de cada seccion
+%\pagebreak % poner esto al final de cada seccion
 
 \end{document}
